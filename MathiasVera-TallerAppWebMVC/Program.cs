@@ -1,4 +1,9 @@
+﻿using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.DependencyInjection;
+using MathiasVera_TallerAppWebMVC.Data;
 var builder = WebApplication.CreateBuilder(args);
+builder.Services.AddDbContext<MathiasVera_TallerAppWebMVCContext>(options =>
+    options.UseSqlServer(builder.Configuration.GetConnectionString("MathiasVera_TallerAppWebMVCContext") ?? throw new InvalidOperationException("Connection string 'MathiasVera_TallerAppWebMVCContext' not found.")));
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
