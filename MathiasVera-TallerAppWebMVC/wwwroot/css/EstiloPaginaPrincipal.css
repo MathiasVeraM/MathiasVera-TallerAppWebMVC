@@ -23,7 +23,7 @@ header {
 
 
 footer {
-    background-color: #000000; /* Fondo negro */
+    background-color: #000000; 
     padding: 20px;
     color: #FFFFFF;
     text-align: center;
@@ -35,4 +35,18 @@ footer a {
 
 footer a:hover {
     color: #FF0000; /* Enlaces rojos al pasar el ratón */
+}
+
+.imagenes-bienvenida {
+    display: flex;
+    justify-content: center;
+    gap: 30px; /* Espaciado entre imágenes */
+    margin-top: 20px; /* Espacio entre el texto y las imágenes */
+}
+
+.img-liga {
+    width: 350px; 
+    height: auto; 
+    border-radius: 10px; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); 
 }
