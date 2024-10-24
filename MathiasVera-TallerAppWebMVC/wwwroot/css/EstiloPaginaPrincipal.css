@@ -1,26 +1,26 @@
-﻿header {
+﻿body {
+    background-color: black;
+    color: white;
+}
+
+header {
     background-color: black;
 }
 
-#home{
-    color:white;
+#listaopciones a {
+    color: white !important;
     font-size: 25px;
 }
 
-#equipos{
-    color: white;
-    font-size:25px;
+#listaopciones a.hover {
+    color: #ffd800;
 }
 
-#estadios {
+.text-center {
+    background-color: black;
     color: white;
-    font-size: 25px;
 }
 
-#jugadores {
-    color: white;
-    font-size: 25px;
-}
 
 footer {
     background-color: #000000; /* Fondo negro */
