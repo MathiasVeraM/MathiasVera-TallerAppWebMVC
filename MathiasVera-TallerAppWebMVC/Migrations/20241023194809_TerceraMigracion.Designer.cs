@@ -3,6 +3,7 @@ using MathiasVera_TallerAppWebMVC.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -10,9 +11,11 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace MathiasVera_TallerAppWebMVC.Migrations
 {
     [DbContext(typeof(MathiasVera_TallerAppWebMVCContext))]
-    partial class MathiasVera_TallerAppWebMVCContextModelSnapshot : ModelSnapshot
+    [Migration("20241023194809_TerceraMigracion")]
+    partial class TerceraMigracion
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -83,6 +86,9 @@ namespace MathiasVera_TallerAppWebMVC.Migrations
                     b.Property<int>("Edad")
                         .HasColumnType("int");
 
+                    b.Property<int>("EquipoId")
+                        .HasColumnType("int");
+
                     b.Property<int>("IdEquipo")
                         .HasColumnType("int");
 
@@ -97,7 +103,7 @@ namespace MathiasVera_TallerAppWebMVC.Migrations
 
                     b.HasKey("Id");
 
-                    b.HasIndex("IdEquipo");
+                    b.HasIndex("EquipoId");
 
                     b.ToTable("Jugador");
                 });
@@ -106,7 +112,7 @@ namespace MathiasVera_TallerAppWebMVC.Migrations
                 {
                     b.HasOne("MathiasVera_TallerAppWebMVC.Models.Equipo", "Equipo")
                         .WithMany()
-                        .HasForeignKey("IdEquipo")
+                        .HasForeignKey("EquipoId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 

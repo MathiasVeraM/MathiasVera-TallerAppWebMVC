@@ -3,6 +3,7 @@ using MathiasVera_TallerAppWebMVC.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -10,9 +11,11 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace MathiasVera_TallerAppWebMVC.Migrations
 {
     [DbContext(typeof(MathiasVera_TallerAppWebMVCContext))]
-    partial class MathiasVera_TallerAppWebMVCContextModelSnapshot : ModelSnapshot
+    [Migration("20241023184359_SegundaMigracion")]
+    partial class SegundaMigracion
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -34,7 +37,8 @@ namespace MathiasVera_TallerAppWebMVC.Migrations
 
                     b.Property<string>("Ciudad")
                         .IsRequired()
-                        .HasColumnType("nvarchar(max)");
+                        .HasMaxLength(25)
+                        .HasColumnType("nvarchar(25)");
 
                     b.Property<string>("Nombre")
                         .IsRequired()
@@ -61,7 +65,8 @@ namespace MathiasVera_TallerAppWebMVC.Migrations
 
                     b.Property<string>("Ciudad")
                         .IsRequired()
-                        .HasColumnType("nvarchar(max)");
+                        .HasMaxLength(25)
+                        .HasColumnType("nvarchar(25)");
 
                     b.Property<string>("Direccion")
                         .IsRequired()

@@ -65,8 +65,10 @@ namespace MathiasVera_TallerAppWebMVC.Controllers
                 await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
             }
+            _context.Add(jugador);
+            await _context.SaveChangesAsync();
             ViewData["IdEquipo"] = new SelectList(_context.Equipo, "Id", "Nombre", jugador.IdEquipo);
-            return View(jugador);
+            return RedirectToAction(nameof(Index));
         }
 
         // GET: Jugadors/Edit/5
