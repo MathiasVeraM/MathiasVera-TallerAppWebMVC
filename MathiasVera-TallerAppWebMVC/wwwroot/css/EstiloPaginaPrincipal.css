@@ -50,3 +50,21 @@ footer a:hover {
     border-radius: 10px; 
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); 
 }
+
+form label {
+    color: white; 
+}
+
+form .form-control {
+    background-color: #333333; 
+    color: white; 
+    border: 1px solid #555555; 
+}
+
+form .form-control::placeholder {
+    color: #cccccc; 
+}
+
+.table tbody td{
+    color: white;
+}
