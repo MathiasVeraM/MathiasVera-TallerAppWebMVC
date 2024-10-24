@@ -1,0 +1,38 @@
+﻿header {
+    background-color: black;
+}
+
+#home{
+    color:white;
+    font-size: 25px;
+}
+
+#equipos{
+    color: white;
+    font-size:25px;
+}
+
+#estadios {
+    color: white;
+    font-size: 25px;
+}
+
+#jugadores {
+    color: white;
+    font-size: 25px;
+}
+
+footer {
+    background-color: #000000; /* Fondo negro */
+    padding: 20px;
+    color: #FFFFFF;
+    text-align: center;
+}
+
+footer a {
+    color: #0026ff; /* Enlaces azules */
+}
+
+footer a:hover {
+    color: #FF0000; /* Enlaces rojos al pasar el ratón */
+}
